@@ -11,10 +11,10 @@ The chain repo reads `samples/`, which is a symlink to this repo (git-ignored th
 ```bash
 cd ~/projects/umina-achala/umina-achala-chain
 ln -s ../umina-achala-samples samples
-node src/mint/mintNFT.js --form json/sample-umina-form-post.json --dry-run
+node src/mint/mintNFT.js --form json_testnet_posts/chrysocolla_a.json --dry-run
 ```
 
-Form posts point at files with paths like `../samples/chrysocolla_a1.jpg`, relative to the post in `json/` or `generated/`.
+Form posts point at files with paths like `../samples/chrysocolla_a1.jpg`, relative to the post in `json_testnet_posts/` (one post per stone, e.g. `chrysocolla_a.json`) or `generated/`.
 
 ## Naming
 
