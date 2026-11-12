@@ -14,7 +14,24 @@ ln -s ../umina-achala-samples samples
 node src/mint/mintNFT.js --form json/sample-umina-form-post.json --dry-run
 ```
 
-Form posts point at files with paths like `../samples/master.jpg`, relative to the post in `json/` or `generated/`.
+Form posts point at files with paths like `../samples/chrysocolla_a1.jpg`, relative to the post in `json/` or `generated/`.
+
+## Naming
+
+All files sit at the top level, no folders: `<stone_type>_<stone letter><photo number>.<ext>`. `stone_type` is the id from `umina-achala-chain/schema/stone-types.json`; the letter is the stone (a, b, c…); the number is the photo of that stone.
+
+```
+chrysocolla_a1.jpg                 stone A, photo 1: main_image, on white
+chrysocolla_a1.png                 stone A, photo 1: transparent (images[0])
+chrysocolla_a2.png                 stone A, photo 2
+chrysocolla_a3.png                 stone A, photo 3
+chrysocolla_a_mining-permit.pdf    stone A's documents
+chrysocolla_a_store-receipt.pdf
+chrysocolla_a_group.jpg            group photo the stones were cut from
+chrysocolla_a_master.xcf           GIMP working file
+```
+
+Photo descriptions in the form posts: "Front view", "Back view", "Side view" when the stone has a face; otherwise by rotation from photo 1, e.g. three photos turned 0°, 120° and 240°: "View 1 of 3", "View 2 of 3, turned 120°", "View 3 of 3, turned 240°".
 
 ## Images
 
@@ -38,8 +55,8 @@ Every image must have a known source (own photo, stock with its licence, or AI-g
 
 | Path | Source | Licence / notes |
 |---|---|---|
-| `master.jpg`, `thumb.jpg` | | |
-| `s.png`, `s.xcf` | | |
+| `chrysocolla_a_group.jpg` | | |
+| `chrysocolla_a1`–`a3`, `chrysocolla_a_master.xcf` | cut from `chrysocolla_a_group.jpg` | |
 
 The PDFs are made up for testing. Their permit, REINFO and RUC numbers are not real.
 
