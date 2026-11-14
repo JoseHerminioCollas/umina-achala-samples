@@ -42,7 +42,7 @@ Each stone's main photo goes in as two files of the same shot:
 
 - **`main_image`:** JPEG, quality 95, on a white background (black or grey for a white stone). Wallets show this one.
 - **`images[0]`:** the same photo as a PNG with a transparent background. The website shows this one.
-- **`images[1…]`:** other angles, also PNG with a transparent background. `images` holds at most 5, so this leaves room for 4.
+- **`images[1…]`:** other angles, also PNG with a transparent background. `images` holds at most 20 (umina-achala-chain#35), so this leaves room for 19.
 - **Size:** 2000–3000 px on the long side; at least 1000 px.
 - **Not accepted by the mint:** HEIC, GIF, TIFF. Convert phone HEIC photos to JPEG first. WebP is accepted but gains little.
 - Keep camera originals unedited and edit copies.
